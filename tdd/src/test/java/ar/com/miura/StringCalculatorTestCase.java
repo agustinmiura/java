@@ -64,6 +64,13 @@ public class StringCalculatorTestCase {
         Assert.assertEquals(result, "3");
     }
 
+    @Test
+    public void testMultipleNumbers() {
+        StringCalculator stringCalculator = new StringCalculator();
+        String result = stringCalculator.add("1,1,1,1,1,1,1,1");
+        Assert.assertEquals(result, "8");
+    }
+
 
 
 }
