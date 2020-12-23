@@ -1,7 +1,9 @@
 package ar.com.miura;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class StringSwapTestCase {
 
@@ -9,27 +11,27 @@ public class StringSwapTestCase {
 
     @Test
     public void test() {
-        Assert.assertEquals("BA", stringSwapper.swap("AB"));
+        assertThat(stringSwapper.swap("AB"), is("BA"));
     }
 
     @Test
     public void testWith4Chars() {
-        Assert.assertEquals("ABDC", stringSwapper.swap("ABCD"));
+        assertThat(stringSwapper.swap("ABDC"), is("ABCD"));
     }
 
     @Test
     public void testWith10Chars() {
-        Assert.assertEquals("ABCDEFGHJI", stringSwapper.swap("ABCDEFGHIJ"));
+        assertThat(stringSwapper.swap("ABCDEFGHJI"), is("ABCDEFGHIJ"));
     }
 
     @Test
     public void testWithEmpty() {
-        Assert.assertEquals("", stringSwapper.swap(""));
+        assertThat(stringSwapper.swap(""), is(""));
     }
 
     @Test
     public void testWith1Char() {
-        Assert.assertEquals("A", stringSwapper.swap("A"));
+        assertThat(stringSwapper.swap("A"), is("A"));
     }
 
 }
