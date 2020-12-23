@@ -40,6 +40,7 @@ import org.junit.Test;
  * ————————————————————————————————
  * make sure you can also handle multiple delimiters with length longer than one char
  * ————————————————————————————————
+ * https://www.youtube.com/watch?v=y8TcPr73Bwo
  */
 public class StringCalculatorTestCase {
 
